@@ -1,11 +1,13 @@
 import os
 from dotenv import load_dotenv 
+import warnings
+warnings.filterwarnings(action="ignore")
 
 from langchain_community.document_loaders import PyPDFDirectoryLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_community.vectorstores import FAISS
-from langchain.chains import RetrievalQA
+from langchain_classic.chains import RetrievalQA
 
 load_dotenv()
 INDEX_DIR = "faiss_index"
