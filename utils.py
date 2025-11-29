@@ -122,7 +122,7 @@ def pretty_print_sources(sources: List) -> None:
         print(f" [{i}] {source} (page {page})")
 
 
-def interactive_qa(qa_chain) -> None:
+def interactive_qa(qa_chain: RetrievalQA) -> None:
     """CLI loop for asking questions against the built index."""
     print("\nPDF Knowledge Assistant (RAG)")
     print("Type 'exit', 'quit', or Ctrl+C to stop.\n")
